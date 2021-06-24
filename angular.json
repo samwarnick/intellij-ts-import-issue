@@ -116,6 +116,31 @@
           }
         }
       }
+    },
+    "mylibrary": {
+      "projectType": "library",
+      "root": "libs/mylibrary",
+      "sourceRoot": "libs/mylibrary/src",
+      "prefix": "intellij-ts-import-issue",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/mylibrary"],
+          "options": {
+            "jestConfig": "libs/mylibrary/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/mylibrary/src/**/*.ts",
+              "libs/mylibrary/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
