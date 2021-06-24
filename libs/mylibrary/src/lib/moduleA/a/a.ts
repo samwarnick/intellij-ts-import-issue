@@ -1,3 +1,3 @@
-export function a() {
-  return 42
+export interface A {
+  answer: number
 }

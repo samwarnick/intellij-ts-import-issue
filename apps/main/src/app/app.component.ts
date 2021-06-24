@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { A } from '@intellij-ts-import-issue/mylibrary';
 
 @Component({
   selector: 'intellij-ts-import-issue-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'main';
+
+  something: A = { answer: 0 };
 }
